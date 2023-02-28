@@ -25,6 +25,10 @@ public class WalletTest {
         wallet.addPaymentType(debitCard);
         assertEquals(1, wallet.getNumberOfPaymentTypes());
     }
+    // This would still pass by mistake because you could have added null to the list and that list would have a length of one. Do a type check instead (might need another method to get the card):
+    // assertTrue(wallet.getCard() instanceof DebitCard); <- see below
+    // Checks the thing on the left is an instance of the class on the right
+    // OR add a null check into the method so that the method cannot complete if the thing selected is null
 
     @Test
     public void canSelectPaymentType() {

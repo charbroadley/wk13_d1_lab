@@ -1,3 +1,5 @@
+// GiftCard sits outside the inheritance hierarchy. It can be charged but doesn't keep a log of transactions etc
+
 public class GiftCard implements IChargeable {
 
     private double balance;
